@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 public class LD1 {
-	static int[] readArray( String fileName )  {
+	public static int[] readArray( String fileName )  {
 		try {
 			Scanner file = new Scanner( new File(fileName) );
 			int[] array = new int[10000];
@@ -18,7 +18,7 @@ public class LD1 {
 		}
 	}
 	
-	static int[] randomArray( int size, int min, int max ) {
+	public static int[] randomArray( int size, int min, int max ) {
 		Random rand = new Random();
 		int[] array = new int[size];
 		for (int i = 0; i < array.length; i++) {
@@ -27,7 +27,7 @@ public class LD1 {
 		return array;
 	}
 
-	static boolean writeArray( int[] array, String fileName ) {
+	public static boolean writeArray( int[] array, String fileName ) {
 		try {
 			PrintWriter file = new PrintWriter( new FileWriter(fileName) );
 			for (int i = 0; i < array.length; i++) file.println(array[i]);
@@ -39,7 +39,7 @@ public class LD1 {
 		}
 	}
 
-	static void showArray( int[] array ) {
+	static void showArrayMarkMinMax( int[] array ) {
 		int minId = getMinIndex(array);
 		int maxId = getMaxIndex(array);
 		for(int i = 0; i < array.length; i++) {
@@ -49,7 +49,17 @@ public class LD1 {
 				System.out.format("%8d", array[i]);
 			if (i % 10 == 9) System.out.println();
 		}
-		if (array.length % 10 != 0) System.out.println();
+		if (array.length % 10 != 0) System.out.println()
+		;System.out.println();
+	}
+	
+	public static void showArray( int[] array ) {
+		for(int i = 0; i < array.length; i++) {
+			System.out.format("%7d", array[i]);
+			if (i % 10 == 9) System.out.println();
+		}
+		if (array.length % 10 != 0) System.out.println()
+		;System.out.println();
 	}
 
 	static double getAverage( int[] array ) {
@@ -79,7 +89,7 @@ public class LD1 {
 		return idx;
 	}
 
-	static boolean isAscending( int[] array ) {
+	public static boolean isAscending( int[] array ) {
 		for (int i = 1; i < array.length; i++)
 			if (array[i-1] > array[i])
 				return false;
@@ -101,7 +111,7 @@ public class LD1 {
 				return;
 			}
 		}
-		showArray(a);
+		showArrayMarkMinMax(a);
 		System.out.printf("Average = %.2f\n", getAverage(a));
 		System.out.printf("Min id = %d\n", getMinIndex(a));
 		System.out.printf("Max id = %d\n", getMaxIndex(a));

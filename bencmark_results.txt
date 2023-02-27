@@ -1,0 +1,5 @@
+        buble     insertion     selection         shell        shell2         quick
+  14017.00 ms    4162.00 ms    1668.00 ms    4233.00 ms    4135.00 ms      16.00 ms
+  14312.00 ms    4278.00 ms    1706.00 ms    3991.00 ms    4359.00 ms      31.00 ms
+  14560.00 ms    4179.00 ms    1670.00 ms    4213.00 ms    4096.00 ms      36.00 ms
+  14345.00 ms    4151.00 ms    1646.00 ms    4130.00 ms    4112.00 ms      24.00 ms

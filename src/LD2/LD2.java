@@ -66,13 +66,13 @@ public class LD2 {
 		return idx;
 	}
 
-	static void swap(int[] array, int pos1, int pos2) {
+	public static void swap(int[] array, int pos1, int pos2) {
 		int temp = array[pos1];
 		array[pos1] = array[pos2];
 		array[pos2] = temp;
 	}
 
-	static void sortBuble(int[] array) {
+	public static void sortBuble(int[] array) {
 		for (int i = 0; i < array.length - 1; i++) {
 			boolean swapped = false;
 
@@ -88,7 +88,7 @@ public class LD2 {
 		}
 	}
 
-	static void sortInsertion(int[] array) {
+	public static void sortInsertion(int[] array) {
 		for (int i = 1; i < array.length; i++)
 			for (int j = i - 1; j >= 0; j--)
 				if (array[j] > array[j + 1])
@@ -97,7 +97,7 @@ public class LD2 {
 					break;
 	}
 
-	static void sortSelection(int[] array) {
+	public static void sortSelection(int[] array) {
 		for (int i = 0; i < array.length - 1; i++)
 			swap(array, i, getMinIndexInRange(array, i, array.length));
 	}
